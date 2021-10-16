@@ -1,20 +1,18 @@
 from dataclasses import dataclass
 from typing import Any
 
-# A head-and-tail implementation of a deque using data classes
 
 
-# Each node is an instance of class Node
 @dataclass
 class Node:
     value: int = None
-    nxt: Any = None  # Any since Node not properly defined at this point
+    nxt: Any = None  
 
 
 @dataclass
 class Deque:
-    head: Node = None      # First node in queue
-    tail: Node = None      # Last node in queue
+    head: Node = None     
+    tail: Node = None     
     size: int = 0
 
     def add_first(self, n):
